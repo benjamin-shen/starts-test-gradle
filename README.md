@@ -1,10 +1,11 @@
 To test:
 
-1. Clone [starts](https://github.com/benjamin-shen/starts)
-2. In `starts`, `git checkout gradle-plugin` and then `cd starts-gradle-plugin`
-3. Run `./gradlew publishToMavenLocal`
-4. Clone starts-test-gradle
-5. In `starts-test-gradle`, run Gradle tasks implemented in `starts/starts-gradle-plugin`
+1. Clone [benjamin-shen/starts](https://github.com/benjamin-shen/starts)
+2. Run `git checkout starts-gradle-plugin`
+3. Run `mvn clean install` in the root directory
+4. Run `cd starts-gradle-plugin` and then `./gradlew publishToMavenLocal`
+5. Clone benjamin-shen/starts-test-gradle (this repo)
+6. Try out the Gradle tasks implemented in `starts/starts-gradle-plugin`
 
 Example commands:
 - `./gradlew startsHelp`

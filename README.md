@@ -14,5 +14,14 @@ Example commands:
   - observe list of Starts tasks
 - `./gradlew help --task startsClean`
   - observe details about the `startsClean` task, including available options
-- `./gradlew startsClean`
-  - if you create a directory `.starts/` in the root of this project, it should be deleted after this task runs
+- `./gradlew starts`, followed by `./gradlew startsClean`
+  - if there are artifacts in `.starts/`, it should be deleted after this task runs
+- `./gradlew starts`, followed by code changes, followed by `./gradlew startsDiff`
+  - shows the changed classes
+
+Core functionality of STARTS:
+1. Run `./gradlew startsClean` if there are any leftover artifacts 
+2. Run `./gradlew starts` and make sure all tests were run 
+3. Run `./gradlew starts` again and make sure no tests were run 
+4. Change something in the code that will affect a dependent test 
+5. Run `./gradlew starts` again and make sure the test was run

@@ -23,3 +23,6 @@ gradle-app.setting
 # Misc
 .idea
 .DS_Store
+
+# STARTS
+.starts
